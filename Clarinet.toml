@@ -1,14 +1,18 @@
 [project]
-name = "cbtc"
+name = "btcFrens"
 authors = []
 description = ""
 telemetry = false
 boot_contracts = ["pox", "costs-v2", "bns"]
 
 [[project.requirements]]
-contract_id = "SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard"
-[contracts.cbtc-token]
-path = "contracts/cbtc-token.clar"
+contract_id = "SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait"
+
+[contracts.mint-nft]
+path = 'contracts/mint-nft.clar'
+
+[contracts.nft-trait]
+path = 'contracts/nft-trait.clar'
 
 [repl]
 costs_version = 2

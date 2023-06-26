@@ -1,0 +1,36 @@
+[2m2023-06-26T20:13:26.651530Z[0m [32m INFO[0m [2mrocket::launch[0m[2m:[0m Configured for release.    
+[2m2023-06-26T20:13:26.651582Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m address: 0.0.0.0    
+[2m2023-06-26T20:13:26.651588Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m port: 20445    
+[2m2023-06-26T20:13:26.651591Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m workers: 3    
+[2m2023-06-26T20:13:26.651594Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m max blocking threads: 512    
+[2m2023-06-26T20:13:26.651596Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m ident: Rocket    
+[2m2023-06-26T20:13:26.651598Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m IP header: X-Real-IP    
+[2m2023-06-26T20:13:26.651600Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m limits: bytes = 8KiB, data-form = 2MiB, file = 1MiB, form = 32KiB, json = 4MB, msgpack = 1MiB, string = 8KiB    
+[2m2023-06-26T20:13:26.651607Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m temp dir: /tmp    
+[2m2023-06-26T20:13:26.651611Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m http/2: true    
+[2m2023-06-26T20:13:26.651614Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m keep-alive: 5s    
+[2m2023-06-26T20:13:26.651617Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m tls: disabled    
+[2m2023-06-26T20:13:26.651619Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m shutdown: ctrlc = false, force = true, signals = [SIGTERM], grace = 0s, mercy = 0s    
+[2m2023-06-26T20:13:26.651623Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m log level: debug    
+[2m2023-06-26T20:13:26.651626Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m cli colors: false    
+[2m2023-06-26T20:13:26.651649Z[0m [32m INFO[0m [2mrocket::launch[0m[2m:[0m Routes:    
+[2m2023-06-26T20:13:26.651665Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m (handle_bitcoin_rpc_call) POST / application/json    
+[2m2023-06-26T20:13:26.651694Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m (handle_ping) GET /ping application/json    
+[2m2023-06-26T20:13:26.651700Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m (handle_bitcoin_wallet_rpc_call) POST /wallet application/json    
+[2m2023-06-26T20:13:26.651703Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m (handle_new_stacks_block) POST /new_block application/json    
+[2m2023-06-26T20:13:26.651705Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m (handle_mined_block) POST /mined_block application/json    
+[2m2023-06-26T20:13:26.651707Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m (handle_new_bitcoin_block) POST /new_burn_block application/json    
+[2m2023-06-26T20:13:26.651710Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m (handle_new_mempool_tx) POST /new_mempool_tx application/json    
+[2m2023-06-26T20:13:26.651713Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m (handle_new_microblocks) POST /new_microblocks application/json    
+[2m2023-06-26T20:13:26.651715Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m (handle_drop_mempool_tx) POST /drop_mempool_tx application/json    
+[2m2023-06-26T20:13:26.651717Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m (handle_mined_microblock) POST /mined_microblock application/json    
+[2m2023-06-26T20:13:26.651719Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m (handle_new_attachement) POST /attachments/new application/json    
+[2m2023-06-26T20:13:26.651726Z[0m [32m INFO[0m [2mrocket::launch[0m[2m:[0m Fairings:    
+[2m2023-06-26T20:13:26.651746Z[0m [32m INFO[0m [2mrocket::launch::_[0m[2m:[0m Shield (liftoff, response, singleton)    
+[2m2023-06-26T20:13:26.652400Z[0m [32m INFO[0m [2mrocket::shield::shield[0m[2m:[0m Shield:    
+[2m2023-06-26T20:13:26.652441Z[0m [32m INFO[0m [2mrocket::shield::shield::_[0m[2m:[0m Permissions-Policy: interest-cohort=()    
+[2m2023-06-26T20:13:26.652447Z[0m [32m INFO[0m [2mrocket::shield::shield::_[0m[2m:[0m X-Content-Type-Options: nosniff    
+[2m2023-06-26T20:13:26.652449Z[0m [32m INFO[0m [2mrocket::shield::shield::_[0m[2m:[0m X-Frame-Options: SAMEORIGIN    
+[2m2023-06-26T20:13:26.652460Z[0m [33m WARN[0m [2mrocket::launch[0m[2m:[0m Rocket has launched from http://0.0.0.0:20445    
+[2m2023-06-26T20:13:30.159804Z[0m [32m INFO[0m [2mrocket::server[0m[2m:[0m Shutdown requested. Waiting for pending I/O...    
+[2m2023-06-26T20:13:30.159932Z[0m [32m INFO[0m [2mrocket::server[0m[2m:[0m Graceful shutdown completed successfully.    

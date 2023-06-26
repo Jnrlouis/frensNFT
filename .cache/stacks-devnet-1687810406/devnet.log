@@ -1,0 +1,12 @@
+Jun 26 20:13:26.630 INFO Checking contracts
+Jun 26 20:13:26.650 INFO Starting Devnet
+Jun 26 20:13:26.654 INFO Initiating Devnet boot sequence (working_dir: /home/jnrlouis/lw3-bounties/frensNFT/.cache/stacks-devnet-1687810406)
+Jun 26 20:13:26.655 INFO Creating network cbtc.devnet
+Jun 26 20:13:26.656 INFO Starting bitcoin-node
+Jun 26 20:13:30.135 INFO Created container bitcoin-node: e1e35edbb777c02ab9a604140dbd92247511f08d93b1c215b2d0bf6fc18b07d1
+Jun 26 20:13:30.159 ERRO Fatal: unable to start bitcoind container: DockerResponseBadParameterError { message: "{\"message\":\"network cbtc.devnet is ambiguous (2 matches found on name)\"}\n" }
+Jun 26 20:13:30.159 INFO Handling Termination command
+Jun 26 20:13:30.161 INFO Terminating bitcoin-node
+Jun 26 20:13:30.162 INFO Pruning network and containers
+Jun 26 20:13:30.620 INFO Artifacts (logs, conf, chainstates) available here: /home/jnrlouis/lw3-bounties/frensNFT/.cache/stacks-devnet-1687810406
+Jun 26 20:13:30.620 INFO ⚠️  fatal error - unable to start bitcoind container: DockerResponseBadParameterError { message: "{\"message\":\"network cbtc.devnet is ambiguous (2 matches found on name)\"}\n" }

@@ -1,12 +1,7 @@
-# cBTC example
+# BTC-FRENS-NFT
 
-In this example we are exploring a naive and centralized but yet functional approach for wrapping / unwrapping BTC to SIP10 tokens.
+By sending BTC to the `authority` address, frens NFT would be minted to the account on the Stacks Blockchain. Powered by `chainhooks`.
 
-By sending BTC to the `authority` address, a party would see an equivalent amount of cBTC being minted on the Stacks Blockchain.
-
-When burning cBTC, a token owner will see some Bitcoin being transfered to his Bitcoin address.
-
-This protocol was meant to illustrate possible interactions between Bitcoin and Stacks using a mechanism called `chainhooks`. The design of this protocol is limited (proofs not being checked, central trustee, etc) and should not be used in production. 
 
 ## How to use
 
@@ -29,10 +24,7 @@ and making sure that the command `serverless` is available in your `$PATH`, the 
 $ serverless offline --verbose --printOutput
 ```
 
-Once the message `Protocol deployed` appears on the screen, transfers tokens back and forth between the Bitcoin Blockchain and the Stacks Blockchain can be performed
-thanks to the deployment plans:
-
-- `deployments/wrap-btc.devnet-plan.yaml`: a BTC transaction is being performed, using the following parameters:
+- `deployments/btc-sendNFT.devnet-plan.yaml`: a BTC transaction is being performed, using the following parameters:
 ```yaml
         - btc-transfer:
             expected-sender: mjSrB3wS4xab3kYqFktwBzfTdPg367ZJ2d
@@ -49,40 +41,28 @@ networks:
       p2pkh:
         equals: mr1iPkD9N3RJZZxXRk7xF9d36gffa6exNC
 ```
-In this protocol, this transaction assumes usage of p2pkh addresses, and sends the change back to the sender, using the same address. When minting the `cBTC` tokens, the authority is converting 
-the 2nd output of the transaction to a Stacks address, and sending the minted tokens to this address.  
 
-- `deployments/unwrap-btc.devnet-plan.yaml`: a contract call is being issued, using the following settings:
-```yaml
-        - contract-call:
-            contract-id: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.cbtc-token
-            expected-sender: STNHKEPYEPJ8ET55ZZ0M5A34J0R3N5FM2CMMMAZ6
-            method: burn
-            parameters:
-              - u100000
-            cost: 5960
-```
-A chainhook, present in `chainhooks/unwrap-btc.chainhook.yaml` is observing cBTC burn events occuring on the Stacks blockchain, thanks to the following configuration:
-```yaml
-networks:
-  devnet:
-    predicate:
-      ft-event:
-        asset-identifier: 'ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.cbtc-token::cbtc'
-        actions:
-          - burn
-```
-When the authority process this chainhook occurences, it sends BTC from its reserve to `cBTC` burner, by assuming that a p2pkh is being used.
+and then, a frens `mint` NFT transaction would be sent:
 
-The wrap / unwrap deployment plans can both be respectively performed with the commands:
+```javascript
+  const txOptions = {
+    contractAddress: frensToken.contractAddress,
+    contractName: frensToken.contractName,
+    functionName: "mint",
+    functionArgs: [standardPrincipalCVFromAddress(recipientAddress)],
+    fee: 1000,
+    nonce,
+    network,
+    anchorMode: AnchorMode.OnChainOnly,
+    postConditionMode: PostConditionMode.Allow,
+    senderKey: process.env.AUTHORITY_SECRET_KEY!,
+  };
+  const tx = await makeContractCall(txOptions);
+```
+
+In this protocol, this transaction assumes usage of p2pkh addresses, and sends the change back to the sender, using the same address.  
 
 ```bash
-$ clarinet deployment apply -p deployments/wrap-btc.devnet-plan.yaml
-```
-
-and 
-
-```bash
-$ clarinet deployment apply -p deployments/unwrap-btc.devnet-plan.yaml
+$ clarinet deployment apply -p deployments/btc-sendNFT.devnet-plan.yaml
 ```
 

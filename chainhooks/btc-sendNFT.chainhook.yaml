@@ -1,5 +1,5 @@
 ---
-name: Wrap BTC
+name: Send Frens
 version: 1
 chain: bitcoin
 networks:

@@ -1,0 +1,10 @@
+Jun 26 20:12:42.501 INFO Checking contracts
+Jun 26 20:12:42.540 INFO Starting Devnet
+Jun 26 20:12:42.546 INFO Initiating Devnet boot sequence (working_dir: /home/jnrlouis/lw3-bounties/frensNFT/.cache/stacks-devnet-1687810362)
+Jun 26 20:12:42.549 INFO Creating network cbtc.devnet
+Jun 26 20:12:42.550 INFO Starting bitcoin-node
+Jun 26 20:12:47.395 ERRO Fatal: unable to create bitcoind container: DockerResponseConflictError { message: "{\"message\":\"Conflict. The container name \\\"/bitcoin-node.cbtc.devnet\\\" is already in use by container \\\"9ff05b3d950b6c2f46f66de79a80716f2b9ba9a230d374955472ed3c8c72a027\\\". You have to remove (or rename) that container to be able to reuse that name.\"}\n" }
+Jun 26 20:12:47.395 INFO Handling Termination command
+Jun 26 20:12:47.397 INFO Pruning network and containers
+Jun 26 20:12:47.603 INFO Artifacts (logs, conf, chainstates) available here: /home/jnrlouis/lw3-bounties/frensNFT/.cache/stacks-devnet-1687810362
+Jun 26 20:12:47.603 INFO ⚠️  fatal error - unable to create bitcoind container: DockerResponseConflictError { message: "{\"message\":\"Conflict. The container name \\\"/bitcoin-node.cbtc.devnet\\\" is already in use by container \\\"9ff05b3d950b6c2f46f66de79a80716f2b9ba9a230d374955472ed3c8c72a027\\\". You have to remove (or rename) that container to be able to reuse that name.\"}\n" }
